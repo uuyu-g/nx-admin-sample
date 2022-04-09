@@ -12,6 +12,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationComponent } from './navigation/navigation.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -19,7 +23,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, DashboardComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    DashboardComponent,
+    NavigationComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
@@ -30,6 +39,9 @@ const routes: Routes = [
     MatButtonModule,
     LayoutModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
