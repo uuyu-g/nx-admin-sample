@@ -16,10 +16,13 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { TreeComponent } from './tree/tree.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'nx', component: NxWelcomeComponent },
+  { path: 'tree', component: TreeComponent },
 ];
 
 @NgModule({
@@ -28,6 +31,7 @@ const routes: Routes = [
     NxWelcomeComponent,
     DashboardComponent,
     NavigationComponent,
+    TreeComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,7 @@ const routes: Routes = [
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
