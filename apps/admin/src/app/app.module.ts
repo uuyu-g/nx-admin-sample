@@ -23,12 +23,17 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'nx', component: NxWelcomeComponent },
   { path: 'tree', component: TreeComponent },
   { path: 'address-form', component: AddressFormComponent },
+  { path: 'table', component: TableComponent },
 ];
 
 @NgModule({
@@ -39,11 +44,13 @@ const routes: Routes = [
     NavigationComponent,
     TreeComponent,
     AddressFormComponent,
+    TableComponent,
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     LayoutModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),
 
     // Material
@@ -59,7 +66,9 @@ const routes: Routes = [
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
