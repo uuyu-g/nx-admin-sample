@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "nx-twitter-alt",
+            "prefix": "admin",
             "style": "kebab-case"
           }
         ]

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nx-twitter-alt-root',
+  selector: 'admin-root',
   templateUrl: './app.component.html',
   styles: [],
 })
