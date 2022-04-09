@@ -18,11 +18,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { TreeComponent } from './tree/tree.component';
 import { MatTreeModule } from '@angular/material/tree';
+import { AddressFormComponent } from './address-form/address-form.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'nx', component: NxWelcomeComponent },
   { path: 'tree', component: TreeComponent },
+  { path: 'address-form', component: AddressFormComponent },
 ];
 
 @NgModule({
@@ -32,6 +38,7 @@ const routes: Routes = [
     DashboardComponent,
     NavigationComponent,
     TreeComponent,
+    AddressFormComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,6 +56,10 @@ const routes: Routes = [
     MatSidenavModule,
     MatToolbarModule,
     MatTreeModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
