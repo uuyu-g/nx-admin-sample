@@ -94,6 +94,16 @@
         "jestConfig": "apps/admin/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "@angular/fire:deploy",
+      "options": {
+        "prerender": false,
+        "ssr": false,
+        "browserTarget": "admin:build:production",
+        "firebaseProject": "nx-todo",
+        "firebaseHostingSite": "admin-nx-todo"
+      }
     }
   },
   "tags": []

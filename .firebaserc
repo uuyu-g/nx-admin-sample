@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "nx-todo": {
+      "hosting": {
+        "admin": [
+          "admin-nx-todo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nx-todo"
+  }
+}
