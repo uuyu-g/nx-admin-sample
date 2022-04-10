@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -30,7 +29,6 @@ import { MatSortModule } from '@angular/material/sort';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
-  { path: 'nx', component: NxWelcomeComponent },
   { path: 'tree', component: TreeComponent },
   { path: 'address-form', component: AddressFormComponent },
   { path: 'table', component: TableComponent },
@@ -39,7 +37,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NxWelcomeComponent,
     DashboardComponent,
     NavigationComponent,
     TreeComponent,
